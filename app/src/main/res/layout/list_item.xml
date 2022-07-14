@@ -2,14 +2,15 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardyB"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="4dp"
     android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="4dp"
+    app:cardBackgroundColor="?attr/colorSecondary"
     app:cardCornerRadius="8dp"
     app:cardElevation="4dp"
-    app:contentPadding="8dp"
-    app:cardBackgroundColor="?attr/colorSecondary">
+    app:contentPadding="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,21 +21,21 @@
             android:layout_width="wrap_content"
             android:layout_height="56dp"
             android:adjustViewBounds="true"
+            android:contentDescription="@string/contactPicture"
+            android:src="@drawable/avatar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/avatar"
-            android:contentDescription="@string/contactPicture" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvItemName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:text="Max Mustermann"
+            android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="?attr/colorOnSecondary"
-            android:layout_marginStart="16dp"
             app:layout_constraintBottom_toTopOf="@+id/tvItemNumber"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" />
@@ -43,10 +44,10 @@
             android:id="@+id/tvItemNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+49123498765"
-            android:textSize="14sp"
-            android:textColor="?attr/colorOnSecondary"
             android:layout_marginStart="16dp"
+            android:text="+49123498765"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/tvItemName" />

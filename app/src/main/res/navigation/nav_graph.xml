@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="de.syntax_institut.telefonbuch.ui.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/jannis"
+            app:destination="@id/editKontaktFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editKontaktFragment"
+        android:name="de.syntax_institut.telefonbuch.ui.EditKontaktFragment"
+        android:label="EditKontaktFragment">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="nummer"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_editKontaktFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
